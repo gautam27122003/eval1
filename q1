@@ -1,0 +1,19 @@
+'''Q1. [CO 2, 15 Marks] Write a Python program to simulate a movie rental service. Use
+lists and dictionaries to store available movies, customer details, and rental transactions.
+Create functions to rent a movie, return a movie, and generate a rental report. Ensure the
+program handles multiple users and transactions'''
+def mvrental(movie_name,lst,dic):
+    if lst.count(movie_name)>0:
+        print("movie can be rented")
+        print("the cost of rent of movie per day is:",dic['movie_name'])
+        a=input("Do you want to rent the movie:(y/n)")
+        if a=='y':
+            b=int(input("for how many days you want to rent movie:"))
+            cost=b*int(dic[movie_name])
+            print("movie name:",movie_name,"\n movie rent per day:",dic['movie_name'],"\n total days to be rented:",b,"\n total cost of rent:",cost)
+    else:
+        print("movie is not available")
+lst=["SE7EN","DUNKIRK","SAVING PRIVATE RYAN"]
+dic=[{"SE7EN":"100"},{"DUNKIRK":"200"},{"SAVING PRIVATE RYAN":"300"}]
+x=input("enter the name of movie you want to rent:")
+mvrental(x,lst,dic)
